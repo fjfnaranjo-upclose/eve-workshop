@@ -1,0 +1,13 @@
+version: '2'
+
+volumes:
+  homes:
+
+services:
+  devbox:
+    build: .
+    ports:
+      - "8022:22"
+      - "12000-12255:12000-12255"
+    volumes:
+      - homes:/home
